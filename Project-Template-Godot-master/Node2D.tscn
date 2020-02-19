@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://OrbEnemy.gd" type="Script" id=1]
+[ext_resource path="res://orb_red.png" type="Texture" id=2]
+[ext_resource path="res://UFOEnemy.gd" type="Script" id=3]
+[ext_resource path="res://spaceship.png" type="Texture" id=4]
+[ext_resource path="res://Ship.gd" type="Script" id=5]
+[ext_resource path="res://pitrizzo-SpaceShip-gpl3-opengameart-96x96.png" type="Texture" id=6]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="OrbEnemy" type="KinematicBody2D" parent="."]
+position = Vector2( 21.636, 40.1812 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="OrbEnemy"]
+position = Vector2( 678.445, 88.0897 )
+scale = Vector2( 2.8352, 2.64202 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="OrbEnemy"]
+position = Vector2( 678.445, 88.0897 )
+scale = Vector2( 2.8352, 2.64202 )
+polygon = PoolVector2Array( 5, -15.1, 14, -9.1, 14, -6.4, 16, 2.7, 16, 5, 13.9, 5, 3.9, 16, -4.7, 16, -15, 8, -15, 5.4, -16, 0.799999, -16, -6, -15.1, -6, -9.1, -15, -6.5, -15, -6, -15.2, -6, -16, 5, -16 )
+
+[node name="UFOEnemy" type="KinematicBody2D" parent="."]
+position = Vector2( 3.09088, 43.2722 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="UFOEnemy"]
+position = Vector2( 197.815, 61.8174 )
+scale = Vector2( 0.184437, 0.169809 )
+texture = ExtResource( 4 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="UFOEnemy"]
+position = Vector2( 197.815, 61.8174 )
+scale = Vector2( 0.184437, 0.169809 )
+polygon = PoolVector2Array( 57.5, -239.7, 57.5, -238.4, 91.5, -227.5, 91.5, -226.3, 126.5, -207.2, 126.5, -205.9, 155.5, -180.9, 155.5, -178.7, 174.5, -155.7, 174.5, -153.5, 188.5, -127.5, 188.5, -124, 195, -99, 195.9, -99, 239.5, -82.4, 239.5, -81, 261.5, -64, 261.5, -31, 259.7, -31, 254.7, -21, 253.2, -21, 223.3, 6, 221, 6, 159.5, 35.3, 145.6, 57, 144.2, 57, 132.5, 66.9, 132.5, 67.7, 157.5, 148.7, 157.5, 152.8, 154.3, 156, -170.5, 156, -170.5, 138, -169, 138, -147.9, 62.4, -160.5, 48.8, -160.5, 46.5, -166.6, 36, -168.2, 36, -182.2, 25, -184, 25, -226.5, 4.2, -226.5, 3, -252.5, -18, -252.5, -20.5, -261.5, -33.5, -261.5, -61.2, -257.7, -68, -255.4, -68, -243.3, -79, -241, -79, -217, -91, -213.8, -91, -193.5, -97.5, -193.5, -99.3, -185, -131, -183.7, -131, -171.8, -157, -170.5, -157, -152.5, -182, -151.3, -182, -132.3, -201, -130.3, -201, -114.2, -214, -112, -214, -88, -228, -85.1, -228, -57.9, -239, -53.9, -239, -39, -242, 42.2, -242 )
+
+[node name="Ship" type="KinematicBody2D" parent="."]
+position = Vector2( 3.09082, 30.9086 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="Ship"]
+position = Vector2( 463.63, 479.084 )
+texture = ExtResource( 6 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ship"]
+position = Vector2( 463.63, 479.084 )
+polygon = PoolVector2Array( 8, -47, 16, -41, 16, -36, 20.8, -36, 28, -28.8, 28, -11.2, 24.8, -8, 28, -4.8, 28, -5.4, 38, -8.8, 38, -5, 39.5, 0, 40.8, 0, 48, 7.2, 48, 36, 39.2, 36, 37.2, 40, 16, 40, 16, 40.8, 8.8, 48, -10, 48, -10, 45.7, -14.9, 40, -41.2, 40, -43.2, 36, -48, 36, -48, 7.4, -40, 1, -40, -4.8, -36.8, -8, -30.8, -8, -28.5, -3.6, -22.8, -6.7, -28, -11.1, -28, -30, -25.9, -30, -20.9, -36, -16, -36, -16, -41, -8, -47, -8, -48, 8, -48 )
